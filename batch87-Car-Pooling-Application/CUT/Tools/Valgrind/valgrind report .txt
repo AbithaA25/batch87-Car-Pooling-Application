@@ -1,0 +1,32 @@
+==516680== Syscall param write(buf) points to uninitialised byte(s)
+==516680==    at 0x49388F3: write (write.c:26)
+==516680==    by 0x48C9664: _IO_file_write@@GLIBC_2.2.5 (fileops.c:1181)
+==516680==    by 0x48C89D5: new_do_write (fileops.c:449)
+==516680==    by 0x48CA708: _IO_new_do_write (fileops.c:426)
+==516680==    by 0x48CA708: _IO_do_write@@GLIBC_2.2.5 (fileops.c:423)
+==516680==    by 0x48C9FEF: _IO_file_close_it@@GLIBC_2.2.5 (fileops.c:136)
+==516680==    by 0x48BD375: fclose@@GLIBC_2.2.5 (iofclose.c:53)
+==516680==    by 0x10AB33: list_to_transporter (in /home/cg87-user2/mproject/myprog)
+==516680==    by 0x10935D: main (in /home/cg87-user2/mproject/myprog)
+==516680==  Address 0x4a270ff is 15 bytes inside a block of size 4,096 alloc'd
+==516680==    at 0x483877F: malloc (vg_replace_malloc.c:307)
+==516680==    by 0x48BD13B: _IO_file_doallocate (filedoalloc.c:101)
+==516680==    by 0x48CBA4F: _IO_doallocbuf (genops.c:347)
+==516680==    by 0x48CBA4F: _IO_doallocbuf (genops.c:342)
+==516680==    by 0x48CABF7: _IO_file_overflow@@GLIBC_2.2.5 (fileops.c:745)
+==516680==    by 0x48C9CDD: _IO_new_file_xsputn (fileops.c:1244)
+==516680==    by 0x48C9CDD: _IO_file_xsputn@@GLIBC_2.2.5 (fileops.c:1197)
+==516680==    by 0x48BE5BC: fwrite (iofwrite.c:39)
+==516680==    by 0x10AAD9: list_to_transporter (in /home/cg87-user2/mproject/myprog)
+==516680==    by 0x10935D: main (in /home/cg87-user2/mproject/myprog)
+==516680==
+==516680==
+==516680== HEAP SUMMARY:
+==516680==     in use at exit: 0 bytes in 0 blocks
+==516680==   total heap usage: 12 allocs, 12 frees, 20,520 bytes allocated
+==516680==
+==516680== All heap blocks were freed -- no leaks are possible
+==516680==
+==516680== Use --track-origins=yes to see where uninitialised values come from
+==516680== For lists of detected and suppressed errors, rerun with: -s
+==516680== ERROR SUMMARY: 2 errors from 1 contexts (suppressed: 0 from 0)

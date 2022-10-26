@@ -1,0 +1,58 @@
+cg87-user2@instance-1:~/mproject$ splint main.c
+Splint 3.1.2 --- 21 Feb 2021
+
+main.c: (in function main)
+main.c:43:2: Return value (type int) ignored: transporter_to_l...
+  Result returned by function call is not used. If this is intended, can cast
+  result to (void) to eliminate message. (Use -retvalint to inhibit warning)
+main.c:44:2: Return value (type int) ignored: commuter_to_list()
+main.c:47:3: Return value (type int) ignored: system("clear")
+main.c:51:3: Return value (type int) ignored: scanf("%d", &choice)
+main.c:55:12: Return value (type int) ignored: transporter_data()
+main.c:57:12: Return value (type int) ignored: commuter_data()
+main.c:60:12: Return value (type int) ignored: admin()
+main.c:68:2: Return value (type int) ignored: list_to_transpor...
+main.c:69:2: Return value (type int) ignored: list_to_commuter()
+main.c: (in function transporter_data)
+main.c:86:9: Return value (type int) ignored: system("clear")
+main.c:90:3: Return value (type int) ignored: scanf("%d", &cho...
+main.c:93:12: Return value (type int) ignored: register_transpo...
+main.c:95:12: Return value (type int) ignored: login_transporter()
+main.c:101:3: Return value (type int) ignored: system("read a")
+main.c:102:3: Return value (type int) ignored: system("clear")
+main.c: (in function commuter_data)
+main.c:122:2: Return value (type int) ignored: system("clear")
+main.c:126:3: Return value (type int) ignored: scanf("%d", &cho...
+main.c:129:12: Return value (type int) ignored: register_commuter()
+main.c:131:11: Return value (type int) ignored: login_commuter()
+main.c:138:3: Return value (type int) ignored: system("read a")
+main.c:139:3: Return value (type int) ignored: system("clear")
+main.c: (in function admin)
+main.c:161:9: Return value (type int) ignored: system("clear")
+main.c:165:3: Return value (type int) ignored: scanf("%d", &cho...
+main.c:168:12: Return value (type int) ignored: maintain_transpo...
+main.c:170:12: Return value (type int) ignored: maintain_commuter()
+main.c:172:12: Return value (type int) ignored: show_routes()
+main.c:174:12: Return value (type int) ignored: busy_route()
+main.c:181:3: Return value (type int) ignored: system("read a")
+main.c:182:3: Return value (type int) ignored: system("clear")
+main.c: (in function maintain_transporter)
+main.c:204:2: Return value (type int) ignored: system("clear")
+main.c:210:3: Return value (type int) ignored: scanf("%d", &ch)
+main.c:213:11: Return value (type int) ignored: register_transpo...
+main.c:215:11: Return value (type int) ignored: modify_details_T()
+main.c:217:11: Return value (type int) ignored: delete_tra_details()
+main.c:219:11: Return value (type int) ignored: view_tra_details()
+main.c:226:3: Return value (type int) ignored: system("read a")
+main.c:227:3: Return value (type int) ignored: system("clear")
+main.c: (in function maintain_commuter)
+main.c:248:2: Return value (type int) ignored: system("clear")
+main.c:254:3: Return value (type int) ignored: scanf("%d", &ch)
+main.c:257:11: Return value (type int) ignored: register_commuter()
+main.c:259:11: Return value (type int) ignored: modify_details_C()
+main.c:261:11: Return value (type int) ignored: delete_com_details()
+main.c:263:11: Return value (type int) ignored: view_com_details()
+main.c:269:3: Return value (type int) ignored: system("read a")
+main.c:270:3: Return value (type int) ignored: system("clear")
+
+Finished checking --- 45 code warnings
