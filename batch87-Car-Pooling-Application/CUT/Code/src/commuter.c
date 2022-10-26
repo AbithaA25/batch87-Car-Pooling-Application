@@ -621,7 +621,7 @@ int list_to_commuter()
 		printf("\nFile is not there to reaad from\n");
 		return EXIT_FAILURE;
 	}
-	for(ptr1=start1;(ptr1);prev1 = ptr1,ptr1=ptr1->next)
+	for(ptr1=start1;(ptr1);ptr1=ptr1->next)
 	{
 		tc2.aadhar = ptr1->aadhar;
 		strcpy(tc2.c_name, ptr1->c_name);
@@ -634,9 +634,9 @@ int list_to_commuter()
 
 
 		fwrite(&tc2,sizeof(tc),1,fp1);
-		free(prev1);
+		
 	}
-	free(prev1);
+	
 	fclose(fp1);
 	return EXIT_SUCCESS;
 }
