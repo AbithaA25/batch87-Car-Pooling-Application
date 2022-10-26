@@ -665,7 +665,7 @@ int list_to_transporter()
 		printf("\nFile is not there to reaad from\n");
 		return EXIT_FAILURE;
 	}
-	for(ptr=start;(ptr);prev = ptr,ptr=ptr->next)
+	for(ptr=start;(ptr);ptr=ptr->next)
 	{
 		t2.d_no = ptr->d_no;
 		strcpy(t2.t_name, ptr->t_name);
@@ -686,9 +686,9 @@ int list_to_transporter()
 
 
 		fwrite(&t2,sizeof(tt),1,p1);
-		free(prev);
+		
 	}
-	free(prev);
+	
 	fclose(p1);
 
 	return EXIT_SUCCESS;
