@@ -18,7 +18,7 @@
 #include <string.h>
 #include <stdlib.h>
 #include <time.h>
-#include "structure.h"
+#include "../header/structure.h"
 
 sc *start1,*new1,*ptr1,*prev1,*last1;
 
@@ -299,6 +299,7 @@ int searching_for_cab()
 	scanf(" %c",&temp->source);
 	printf("ENTER THE DESTINATION POINT \n");
 	scanf(" %c",&temp->Destination);
+	int flag = 0;
 
 	for(t_root = start;(t_root) ;t_root = t_root->next)
 	{
@@ -306,12 +307,18 @@ int searching_for_cab()
 		if(t_root->source[0] == temp->source  && t_root->dest[0] == temp->Destination)
 		{
 			printf("%c to %c vehicle model %s\n",t_root->source[0] ,t_root->dest[0],t_root->type_of_v);
+			flag++;
 		}
 	}
+	
 
-
+        if(flag > 0)
+	{
 	printf("enter the vehicle model \n");
 	scanf("%s",dummy_vehicle);
+	}
+	else
+		printf("No vehicles available for this route\n");
 
 	while(root != NULL)
 	{
@@ -555,7 +562,7 @@ int commuter_to_list()
 
 	FILE *fp;
 	tc tc1;
-	if((fp=fopen("Commuter","rb"))==NULL)
+	if((fp=fopen("../data/Commuter","rb"))==NULL)
 	{
 		printf("\nFile is not there to reaad from\n");
 		return EXIT_FAILURE;
@@ -616,7 +623,7 @@ int list_to_commuter()
 		return EXIT_FAILURE;
 	}
 	FILE *fp1;
-	if((fp1=fopen("Commuter","wb"))==NULL)
+	if((fp1=fopen("../data/Commuter","wb"))==NULL)
 	{
 		printf("\nFile is not there to reaad from\n");
 		return EXIT_FAILURE;
@@ -634,11 +641,12 @@ int list_to_commuter()
 
 
 		fwrite(&tc2,sizeof(tc),1,fp1);
-		
+
 	}
-	
+
 	fclose(fp1);
 	return EXIT_SUCCESS;
 }
+
 
 

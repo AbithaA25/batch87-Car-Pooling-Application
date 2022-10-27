@@ -15,7 +15,7 @@
 
 #include <stdio.h>
 #include <stdlib.h>
-#include "structure.h"
+#include "../header/structure.h"
 
 
 
@@ -274,5 +274,6 @@ int maintain_commuter()
 	}
 	return 1;
 }
+
 
 

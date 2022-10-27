@@ -21,7 +21,7 @@
 #include <string.h>
 #include <stdlib.h>
 #include <ctype.h>
-#include "structure.h"
+#include "../header/structure.h"
 
 /******************************************************
  * *FUNCTION NAME : integer_validation
@@ -467,6 +467,7 @@ int password_validation(char *str)
 	        return 0;
 	}
 }
+
 
 
 
